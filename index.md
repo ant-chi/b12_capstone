@@ -5,5 +5,7 @@
 ## Methods
 ## Results
 ## Discussion
-![gif1](figures/modisEVI.gif)
-![gif2](https://github.com/cashcountinchi/cashcountinchi.github.io/blob/main/figures/modisEVI.gif)
+![gif1](images/CA_landCover/ca.png)
+![l8](images/gifs/l8.gif)
+![landCover](images/gifs/landCover.gif)
+![severity](images/gifs/severity.gif)
