@@ -1,3 +1,4 @@
+
 # Table of Contents
 1. **[Introduction](#introduction)**
 2. **[Data](#data)**
@@ -24,8 +25,8 @@ Our analysis uses remote sensing data to specifically focus on the effect of wil
 Burn severity maps are widely used by federal agencies and forest managers to map fire damage and extent and help manage forest recovery efforts, update vegetation and land cover maps, and monitor ecosystem health. Traditional methods of producing these maps are expensive and time-consuming since they require teams of surveyors and ecologists to gather in-situ data. For many fires, this is infeasible due to harsh weather and inaccessible terrain. These methods are still used for certain fires, but have been largely phased out with the introduction of Earth observing satellites that provide remotely sensed data. Fires can be mapped at a much faster and larger scale at a fraction of the cost relative to field surveys, while still maintaining high accuracy. 
 
 <figure class="image" align="center">
-  <img src="images/figures/Rim-Fire-Vegetation-Severity-9-16-2013.jpeg" alt="firefighter image">
-  <figcaption align="center">Burn severity map of 2013 Rim Fire by RAVG</figcaption>
+  <img src="images/figures/buckMTBS.png" alt="firefighter image">
+  <figcaption align="center">Burn severity map of 2017 Buck Fire by MTBS</figcaption>
 </figure>
 
 
