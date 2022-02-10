@@ -1,4 +1,4 @@
-## What is Burn Severity?
+## 1.1&nbsp;&nbsp;&nbsp;&nbsp;What is Burn Severity?
 
 The most widespread spectral index for identifying burned areas and fire severity levels is the Normalized Burn Ratio, NBR = (NIR-SWIR)(NIR+SWIR) and with Landsat this is NBR = (Band 5 - Band 7)(Band 5 + Band 7).
 The near-infrared band (NIR) is sensitive to chlorophyll present in live vegetation, while the short-wave infrared band (SWIR) is primarily sensitive to water content in soil and vegetation. It has also been shown to be capable of discerning dead wood from burned soil, ash, and charred wood. As a result, NBR is sensitive to absolute changes in live, photosynthetically active vegetation, moisture content, and certain post-fire surface conditions. [3] 
