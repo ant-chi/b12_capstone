@@ -40,10 +40,10 @@ Another source of inconsistency is the use of different pre and post fire images
 
 <div class="row">
   <div class="column">
-    <img src="images/figures/Rim-Fire-Vegetation-Severity-9-16-2013.jpeg" alt="Snow" style="width:50%">
+    <img src="images/figures/Rim-Fire-Vegetation-Severity-9-16-2013.jpeg" alt="Snow">
   </div>
   <div class="column">
-    <img src="images/figures/Rim-Fire-Soil-Severity-9-17-2013.jpeg" alt="Forest" style="width:50%">
+    <img src="images/figures/Rim-Fire-Soil-Severity-9-17-2013.jpeg" alt="Forest">
   </div>
 </div>
 
