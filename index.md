@@ -1,24 +1,19 @@
-**{{site.description}}**
-
-
 # Table of Contents
 1. **[Introduction](#introduction)**
-2. **[Background](#background)**
+2. **[Data](#data)**
 3. **[Methods](#methods)**
 4. **[Results](#results)**
 5. **[Discussion](#discussion)**
+6. **[References](#references)**
 
 
 ## 1&nbsp;&nbsp;&nbsp;&nbsp;Introduction
 In recent years, wildfires have been growing into a much larger environmental and public safety threat. Fire seasons are larger, more destructive, and burning longer than ever before such that the US Forest Service has coined the term “fire year”. The exact causes for this behavior are not known, but scientists point to climate change, increased human activity from expansion into rural areas, and over-zealous fire prevention policies that have created environments ripe for wildfires with large buildups of combustible fire fuels. [1] This phenomenon is happening across the world, but is especially apparent in Northern California, which has historically been a global hotspot for wildfires. For example the 2018 fire season, the worst in California’s history, caused over $140 billion in damages and killed over 100 people. Our preliminary analysis also confirms that wildfires are more frequent and destructive. From 1990-2020 there has been a 267% increase in the number of fires annually and in the past 20 years there has been a 520% increase in the number of fire seasons that exceed 500,000 burned acres relative to the 50 years prior.
 
-
 <figure class="image">
   <img src="images/figures/img1.jpeg" alt="firefighter image">
   <figcaption align="center">Firefigher battles the 2020 Creek Fire </figcaption>
 </figure>
-
-
 
 
 ## 1.1&nbsp;&nbsp;&nbsp;&nbsp;What is Burn Severity?
@@ -36,32 +31,41 @@ Burn severity maps are widely used by federal agencies and forest managers to ma
 
 Remote sensing data is widely used in many other applications, such as agriculture, climate change, and natural disasters, since they cover long time spans and are continuously updated with high resolution, multi-spectral data
 
-[**Burn Severity Details**](./burnSeverity.md)
-
-
-Fire mapping responsibilities are shared by several federal interagency groups, mainly Monitoring Trends in Burn Severity [(MTBS)](https://mtbs.gov/), Rapid Assessment of Vegetation Condition after Wildfire [(RAVG)](https://burnseverity.cr.usgs.gov/ravg/), and Burned Area Emergency Response [(BAER)](https://burnseverity.cr.usgs.gov/baer/baer/home).
+Fire mapping responsibilities are shared by several federal interagency groups, mainly Monitoring Trends in Burn Severity ([MTBS](https://mtbs.gov/)), Rapid Assessment of Vegetation Condition after Wildfire ([RAVG](https://burnseverity.cr.usgs.gov/ravg/)), and Burned Area Emergency Response ([BAER](https://burnseverity.cr.usgs.gov/baer/baer/home)).
 Federal fire-mapping groups mainly use this image differencing method with dNBR, but with slight differences based on their organizational needs.
+
+[**[+] Burn Severity Details**](./burnSeverity.md)
+
+
+## 1.2&nbsp;&nbsp;&nbsp;&nbsp;Region of Interest
+Our study will be focused on Northern California since it is a global hotspot for wildfires that has affected a majority of students at UCSD. In addition, its infamous wildfires are well documented by CALFIRE, have been researched significantly in the past, and there are many remote sensing datasets that cover this region.
+
+A majority of counties in Northern California are very rural, have sparse populations, and are mostly undeveloped. Their land covers are largely dominated by forests, low-lying shrubland, annual grassland, and mixed chaparral vegetation, which are conducive to wildfires. As a result these counties account for a majority of wildfires and related damages in Northern California. Counties located in Central California near Sacramento, like Yolo, Sutter, and San Joaquin, are more developed and revolve around agriculture and livestock. On average these counties experience less than 2 wildfires per year, usually under 1000 acres.
+
+Northern California is historically prone to wildfire since it doesn’t experience much rainfall and has dry, hot summers that lead to large accumulations of combustible fire fuels in the fall. Environmental factors including strong downslope Santa Ana winds, lightning strikes, and human activity are the most frequent wildfire ignition sources. [1] California is especially susceptible to long droughts and often experiences consecutive dry years, which are characteristic of regions with Mediterranean type climates. As the effects of climate change become more apparent, droughts and wildfires in California will be a greater environmental and public safety hazard.
 
 
 ## 2&nbsp;&nbsp;&nbsp;&nbsp;Data
-Google Earth Engine (GEE) is a cloud-based distributed computing environment that greatly reduces the technical barriers to entry for large scale geospatial analysis and hosts a large catalog of data including satellite imagery, climate forecasts, and geophysical data.[6] We used the GEE platform to access and run computations on remote sensing data from Landsat 8, NASA SRTM, NLCD 2016, and GRIDMET.
+Google Earth Engine ([GEE](https://earthengine.google.com/)) is a cloud-based distributed computing environment that greatly reduces the technical barriers to entry for large scale geospatial analysis and hosts a large catalog of data including satellite imagery, climate forecasts, and geophysical data.[6] We used the GEE platform to access and run computations on remote sensing data from Landsat 8, NASA SRTM, NLCD 2016, and GRIDMET.
 
 | Data | Provider | Bands |
 | ---- | ----- | ---- |
-| Landsat 8 (Level 2, Collection 2, Tier 1) | USGS | 7 |
-|NASA SRTM Digital Elevation |	NASA / USGS / JPL-Caltech | 1 |
-| NLCD: USGS National Land Cover Database (2016) | USGS | 14 |
-| GRIDMET: University of Idaho Gridded Surface Meteorological Dataset |	University of California: Merced | 16 |
+| [Landsat 8 (Level 2, Collection 2, Tier 1)](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2) | USGS | 7 |
+| [NASA SRTM Digital Elevation](https://developers.google.com/earth-engine/datasets/catalog/USGS_SRTMGL1_003?hl=en) |	NASA / USGS / JPL-Caltech | 1 |
+| [NLCD: USGS National Land Cover Database (2016)](https://developers.google.com/earth-engine/datasets/catalog/USGS_NLCD_RELEASES_2016_REL?hl=en) | USGS | 14 |
+| [GRIDMET: University of Idaho Gridded Surface Meteorological Dataset](https://developers.google.com/earth-engine/datasets/catalog/IDAHO_EPSCOR_GRIDMET) |	University of California: Merced | 16 |
 
 
-Data on California wildfire seasons from 1950-2020 is provided by CALFIRE and includes information on a fire’s location, geometry, size, and duration.
+Data on California wildfire seasons from 1950-2020 is provided by [CALFIRE](https://gis.data.ca.gov/datasets/CALFIRE-Forestry::california-fire-perimeters-1950/explore) and includes information on a fire’s location, geometry, size, and duration.
+
 
 ## 2.1&nbsp;&nbsp;&nbsp;&nbsp;Fire and Image Selection
 In total, 17 fires were selected from a candidate set of 79 fires. The fires occurred across Northern California between 2013-2020 because this coincides with the launch of Landsat 8 (February 2013) and the California wildfire dataset doesn’t include any fires past the 2020 fire season. All selected fires are at least 10,000 acres in size because fires of this size are better documented and have more pixels to sample. 
 To get optimal pre and post fire images from Landsat 8, we considered all images that occurred 60 days before and after a fire. Images were selected based on the presence of environmental factors that reduce image quality, including clouds, smoke, and snow,
 and their proximity to a fire’s start or end. A majority of pre-fire images are within 14 days of a fire’s ignition, but some post-fire images occur much later due to poor image quality.
 
-[**Fire and Image Selection Details**](./fireImageDetails.md)
+[**[+] Selection Details**](./fireImageDetails.md)
+
 
 ## 2.3&nbsp;&nbsp;&nbsp;&nbsp;Data Extraction
 The selected Landsat 8 images are pre-orthorectified to account for terrain, clipped to each fire’s buffered bounding box, and we used image differencing to calculate dNBR. We applied a threshold that classifies each pixel and the possible pixel labels are: vegetation growth, unburned, low severity burn, moderate severity burn, and high severity burn. This threshold is based on proposed burn severity values by the USGS, which we reduced from seven classes to five. [2] Images of land cover from NLCD, elevation from NASA SRTM, and weather from GRIDMET are also clipped to each fire’s buffered bounding box and merged with the Landsat 8 image to produce a single image for each fire.
@@ -76,9 +80,9 @@ We tested several supervised classification models to compare their performance 
 
 ## 3.N&nbsp;&nbsp;&nbsp;&nbsp;Model #N
 
-## Results
+## 4&nbsp;&nbsp;&nbsp;&nbsp;Results
 
-## Discussion
+## 5&nbsp;&nbsp;&nbsp;&nbsp;Discussion
 
-## References
+## 6&nbsp;&nbsp;&nbsp;&nbsp;References
 1. 
