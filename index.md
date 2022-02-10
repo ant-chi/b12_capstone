@@ -12,7 +12,13 @@
 ## 1&nbsp;&nbsp;&nbsp;&nbsp;Introduction
 In recent years, wildfires have been growing into a much larger environmental and public safety threat. Fire seasons are larger, more destructive, and burning longer than ever before such that the US Forest Service has coined the term “fire year”. The exact causes for this behavior are not known, but scientists point to climate change, increased human activity from expansion into rural areas, and over-zealous fire prevention policies that have created environments ripe for wildfires with large buildups of combustible fire fuels. [1] This phenomenon is happening across the world, but is especially apparent in Northern California, which has historically been a global hotspot for wildfires. For example the 2018 fire season, the worst in California’s history, caused over $140 billion in damages and killed over 100 people. Our preliminary analysis also confirms that wildfires are more frequent and destructive. From 1990-2020 there has been a 267% increase in the number of fires annually and in the past 20 years there has been a 520% increase in the number of fire seasons that exceed 500,000 burned acres relative to the 50 years prior.
 
-<img src="images/figures/img1.jpeg" alt="image1" style="width:70%;" class="center">
+
+<figure class="image">
+  <img src="images/figures/img1.jpeg" alt="firefighter image">
+  <figcaption align="center">Firefigher battles the 2020 Creek Fire </figcaption>
+</figure>
+
+
 
 
 ## 1.1&nbsp;&nbsp;&nbsp;&nbsp;What is Burn Severity?
@@ -20,20 +26,33 @@ In recent years, wildfires have been growing into a much larger environmental an
 To clarify the confusion on the meaning and usage of wildfire jargon, fire intensity is strictly used to describe the total amount of energy released by a fire and not the effect on the ecosystem and fire or burn severity describe the effect of fire on aboveground and belowground biomass. This includes measures like canopy cover, crown volume, surface litter, and soil hydrophobicity. These terms are often used interchangeably, but a minor distinction is that in certain applications burn severity can specifically refer to fire effects on soil. [2]
 Our analysis uses remote sensing data to specifically focus on the effect of wildfire on above and belowground biomass, which we refer to interchangeably as fire or burn severity. This definition is widely used by federal fire mapping groups and past research on wildfires.
 
-Burn severity maps are widely used by federal agencies and forest managers to map fire damage and extent and help manage forest recovery efforts, update vegetation and land cover maps, and monitor ecosystem health. Traditional methods of producing these maps are expensive and time-consuming since they require teams of surveyors and ecologists to gather in-situ data. For many fires, this is infeasible due to harsh weather and inaccessible terrain. These methods are still used for certain fires, but have been largely phased out with the introduction of Earth observing satellites that provide remotely sensed data. Fires can be mapped at a much faster and larger scale at a fraction of the cost relative to field surveys, while still maintaining high accuracy. Remote sensing data is widely used in many other applications, such as agriculture, climate change, and natural disasters, since they cover long time spans and are continuously updated with high resolution, multi-spectral data
+Burn severity maps are widely used by federal agencies and forest managers to map fire damage and extent and help manage forest recovery efforts, update vegetation and land cover maps, and monitor ecosystem health. Traditional methods of producing these maps are expensive and time-consuming since they require teams of surveyors and ecologists to gather in-situ data. For many fires, this is infeasible due to harsh weather and inaccessible terrain. These methods are still used for certain fires, but have been largely phased out with the introduction of Earth observing satellites that provide remotely sensed data. Fires can be mapped at a much faster and larger scale at a fraction of the cost relative to field surveys, while still maintaining high accuracy. 
+
+<figure class="image">
+  <img src="images/figures/Rim-Fire-Vegetation-Severity-9-16-2013.jpeg" alt="firefighter image">
+  <figcaption align="center">Burn severity map of 2013 Rim Fire by RAVG</figcaption>
+</figure>
+
+
+Remote sensing data is widely used in many other applications, such as agriculture, climate change, and natural disasters, since they cover long time spans and are continuously updated with high resolution, multi-spectral data
 
 [**Burn Severity Details**](./burnSeverity.md)
 
 
-
-Fire mapping responsibilities are shared by several federal interagency groups, mainly Monitoring Trends in Burn Severity (MTBS), Rapid Assessment of Vegetation Condition after Wildfire (RAVG), and Burned Area Emergency Response (BAER).
+Fire mapping responsibilities are shared by several federal interagency groups, mainly Monitoring Trends in Burn Severity [(MTBS)](https://mtbs.gov/), Rapid Assessment of Vegetation Condition after Wildfire [(RAVG)](https://burnseverity.cr.usgs.gov/ravg/), and Burned Area Emergency Response [(BAER)](https://burnseverity.cr.usgs.gov/baer/baer/home).
 Federal fire-mapping groups mainly use this image differencing method with dNBR, but with slight differences based on their organizational needs.
 
 
 ## 2&nbsp;&nbsp;&nbsp;&nbsp;Data
 Google Earth Engine (GEE) is a cloud-based distributed computing environment that greatly reduces the technical barriers to entry for large scale geospatial analysis and hosts a large catalog of data including satellite imagery, climate forecasts, and geophysical data.[6] We used the GEE platform to access and run computations on remote sensing data from Landsat 8, NASA SRTM, NLCD 2016, and GRIDMET.
 
-(add data table)
+| Data | Provider | Bands |
+| ---- | ----- | ---- |
+| Landsat 8 (Level 2, Collection 2, Tier 1) | USGS | 7 |
+|NASA SRTM Digital Elevation |	NASA / USGS / JPL-Caltech | 1 |
+| NLCD: USGS National Land Cover Database (2016) | USGS | 14 |
+| GRIDMET: University of Idaho Gridded Surface Meteorological Dataset |	University of California: Merced | 16 |
+
 
 Data on California wildfire seasons from 1950-2020 is provided by CALFIRE and includes information on a fire’s location, geometry, size, and duration.
 
@@ -62,9 +81,4 @@ We tested several supervised classification models to compare their performance 
 ## Discussion
 
 ## References
-
-
-![ca](images/CA_landCover/ca.png)
-![l8](images/gifs/l8.gif)
-![landCover](images/gifs/landCover.gif)
-![severity](images/gifs/severity.gif)
+1. 
