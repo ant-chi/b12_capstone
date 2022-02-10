@@ -10,7 +10,7 @@
 ## 1&nbsp;&nbsp;&nbsp;&nbsp;Introduction
 In recent years, wildfires have been growing into a much larger environmental and public safety threat. Fire seasons are larger, more destructive, and burning longer than ever before such that the US Forest Service has coined the term “fire year”. The exact causes for this behavior are not known, but scientists point to climate change, increased human activity from expansion into rural areas, and over-zealous fire prevention policies that have created environments ripe for wildfires with large buildups of combustible fire fuels. [1] This phenomenon is happening across the world, but is especially apparent in Northern California, which has historically been a global hotspot for wildfires. For example the 2018 fire season, the worst in California’s history, caused over $140 billion in damages and killed over 100 people. Our preliminary analysis also confirms that wildfires are more frequent and destructive. From 1990-2020 there has been a 267% increase in the number of fires annually and in the past 20 years there has been a 520% increase in the number of fire seasons that exceed 500,000 burned acres relative to the 50 years prior.
 
-<figure class="image">
+<figure class="image" align="center">
   <img src="images/figures/img1.jpeg" alt="firefighter image">
   <figcaption align="center">Firefigher battles the 2020 Creek Fire </figcaption>
 </figure>
@@ -23,7 +23,7 @@ Our analysis uses remote sensing data to specifically focus on the effect of wil
 
 Burn severity maps are widely used by federal agencies and forest managers to map fire damage and extent and help manage forest recovery efforts, update vegetation and land cover maps, and monitor ecosystem health. Traditional methods of producing these maps are expensive and time-consuming since they require teams of surveyors and ecologists to gather in-situ data. For many fires, this is infeasible due to harsh weather and inaccessible terrain. These methods are still used for certain fires, but have been largely phased out with the introduction of Earth observing satellites that provide remotely sensed data. Fires can be mapped at a much faster and larger scale at a fraction of the cost relative to field surveys, while still maintaining high accuracy. 
 
-<figure class="image">
+<figure class="image" align="center">
   <img src="images/figures/Rim-Fire-Vegetation-Severity-9-16-2013.jpeg" alt="firefighter image">
   <figcaption align="center">Burn severity map of 2013 Rim Fire by RAVG</figcaption>
 </figure>

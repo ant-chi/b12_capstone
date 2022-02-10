@@ -4,13 +4,13 @@ The most widespread spectral index for identifying burned areas and fire severit
 The near-infrared band (NIR) is sensitive to chlorophyll present in live vegetation, while the short-wave infrared band (SWIR) is primarily sensitive to water content in soil and vegetation. It has also been shown to be capable of discerning dead wood from burned soil, ash, and charred wood. As a result, NBR is sensitive to absolute changes in live, photosynthetically active vegetation, moisture content, and certain post-fire surface conditions. [3] 
 
 
-{% include demo.html %}
-
-
-
 To produce a burn severity map, optimal pre and post fire images are selected based on their proximity to a fire and the presence of environmental factors that reduce image quality, like clouds, smoke, and snow. NBR is then calculated for both images and the resulting images are differenced to get dNBR. Burn severity classifications are produced by having an analyst determine thresholds based 
 
-{% include firesMap.html %}
+<figure class="image" align="center">
+  <img src="images/figures/firesMap.png" alt="firesMap">
+  <figcaption align="center">17 selected fires with bounding boxes </figcaption>
+</figure>
+
 
 Computing NBR for selected pre, post fire images and differencing the result provides a measure of absolute change caused by fire (dNBR). 
 
