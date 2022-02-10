@@ -5,6 +5,7 @@ The near-infrared band (NIR) is sensitive to chlorophyll present in live vegetat
 
 
 {% include demo.html %}
+{% include firesMap.html %}
 
 To produce a burn severity map, optimal pre and post fire images are selected based on their proximity to a fire and the presence of environmental factors that reduce image quality, like clouds, smoke, and snow. NBR is then calculated for both images and the resulting images are differenced to get dNBR. Burn severity classifications are produced by having an analyst determine thresholds based 
 
