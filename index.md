@@ -8,8 +8,8 @@
 6. **[References](#references)**
 
 
-<h2>
 ## 1&nbsp;&nbsp;&nbsp;&nbsp;Introduction <a name="introduction"></a>
+
 In recent years, wildfires have been growing into a much larger environmental and public safety threat. Fire seasons are larger, more destructive, and burning longer than ever before such that the US Forest Service has coined the term “fire year”. The exact causes for this behavior are not known, but scientists point to climate change, increased human activity from expansion into rural areas, and over-zealous fire prevention policies that have created environments ripe for wildfires with large buildups of combustible fire fuels. [1] This phenomenon is happening across the world, but is especially apparent in Northern California, which has historically been a global hotspot for wildfires. For example the 2018 fire season, the worst in California’s history, caused over $140 billion in damages and killed over 100 people. Our preliminary analysis also confirms that wildfires are more frequent and destructive. From 1990-2020 there has been a 267% increase in the number of fires annually and in the past 20 years there has been a 520% increase in the number of fire seasons that exceed 500,000 burned acres relative to the 50 years prior.
 
 <figure class="image" align="center">
