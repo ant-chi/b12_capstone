@@ -1,7 +1,9 @@
 
 # Table of Contents
-1. **[Introduction](#introduction)**
+1. **[Introduction](##1&nbsp;&nbsp;&nbsp;&nbsp;Introduction)**
+2. **[Data](#2&nbsp;&nbsp;&nbsp;&nbsp;Data)**
 2. **[Data](#data)**
+
 3. **[Methods](#methods)**
 4. **[Results](#results)**
 5. **[Discussion](#discussion)**
@@ -35,16 +37,19 @@ Remote sensing data is widely used in many other applications, such as agricultu
 Fire mapping responsibilities are shared by several federal interagency groups, mainly Monitoring Trends in Burn Severity ([MTBS](https://mtbs.gov/)), Rapid Assessment of Vegetation Condition after Wildfire ([RAVG](https://burnseverity.cr.usgs.gov/ravg/)), and Burned Area Emergency Response ([BAER](https://burnseverity.cr.usgs.gov/baer/baer/home)).
 Federal fire-mapping groups mainly use this image differencing method with dNBR, but with slight differences based on their organizational needs.
 
-[**[+] Burn Severity Details**](./burnSeverity.md)
+#### [[+] Burn Severity Details](./md/burnSeverity.md)
 
 
 ## 1.2&nbsp;&nbsp;&nbsp;&nbsp;Region of Interest
 Our study will be focused on Northern California since it is a global hotspot for wildfires that has affected a majority of students at UCSD. In addition, its infamous wildfires are well documented by CALFIRE, have been researched significantly in the past, and there are many remote sensing datasets that cover this region.
 
+(add figure)
+
 A majority of counties in Northern California are very rural, have sparse populations, and are mostly undeveloped. Their land covers are largely dominated by forests, low-lying shrubland, annual grassland, and mixed chaparral vegetation, which are conducive to wildfires. As a result these counties account for a majority of wildfires and related damages in Northern California. Counties located in Central California near Sacramento, like Yolo, Sutter, and San Joaquin, are more developed and revolve around agriculture and livestock. On average these counties experience less than 2 wildfires per year, usually under 1000 acres.
 
 Northern California is historically prone to wildfire since it doesn’t experience much rainfall and has dry, hot summers that lead to large accumulations of combustible fire fuels in the fall. Environmental factors including strong downslope Santa Ana winds, lightning strikes, and human activity are the most frequent wildfire ignition sources. [1] California is especially susceptible to long droughts and often experiences consecutive dry years, which are characteristic of regions with Mediterranean type climates. As the effects of climate change become more apparent, droughts and wildfires in California will be a greater environmental and public safety hazard.
 
+## Data
 
 ## 2&nbsp;&nbsp;&nbsp;&nbsp;Data
 Google Earth Engine ([GEE](https://earthengine.google.com/)) is a cloud-based distributed computing environment that greatly reduces the technical barriers to entry for large scale geospatial analysis and hosts a large catalog of data including satellite imagery, climate forecasts, and geophysical data.[6] We used the GEE platform to access and run computations on remote sensing data from Landsat 8, NASA SRTM, NLCD 2016, and GRIDMET.
@@ -65,7 +70,7 @@ In total, 17 fires were selected from a candidate set of 79 fires. The fires occ
 To get optimal pre and post fire images from Landsat 8, we considered all images that occurred 60 days before and after a fire. Images were selected based on the presence of environmental factors that reduce image quality, including clouds, smoke, and snow,
 and their proximity to a fire’s start or end. A majority of pre-fire images are within 14 days of a fire’s ignition, but some post-fire images occur much later due to poor image quality.
 
-[**[+] Selection Details**](./fireImageDetails.md)
+#### [[+] Selection Details](./md/fireImageDetails.md)
 
 
 ## 2.3&nbsp;&nbsp;&nbsp;&nbsp;Data Extraction
