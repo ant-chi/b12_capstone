@@ -2,46 +2,23 @@
 
 (add details)
 
-<figure class="image" align="center">
-  <img src="../images/figures/firesMap.png" alt="firesMap">
-  <figcaption align="center">17 selected fires with bounding boxes </figcaption>
-</figure>
 
-
-<figure class="image" align="center">
-  <img src="../images/figures/fireTable.png" alt="fireTable">
-  <figcaption align="center">17 selected fires with bounding boxes </figcaption>
-</figure>
-
-<figure class="image" align="center">
-  <img src="../images/CA_landCover/ca.png" alt="fireTable">
-  <figcaption align="center">17 selected fires with bounding boxes </figcaption>
-</figure>
-
-## 1
 <figure class="image" align="center">
 <div class="row">
   <div class="column">
-    <img src="../images/figures/Rim-Fire-Vegetation-Severity-9-16-2013.jpeg" alt="Snow">
+    <img src="../images/figures/firesMap.png" alt="firesMap">
   </div>
   <div class="column">
-    <img src="../images/figures/Rim-Fire-Soil-Severity-9-17-2013.jpeg" alt="Forest">
+    <img src="../images/figures/fireTable.png" alt="fireTable">
   </div>
 </div>
-	<figcaption align="center">17 selected fires with bounding boxes </figcaption>
+	<figcaption align="center">Location and data of 17 selected fires </figcaption>
 </figure>
 
 
-## 2
 
-<div class="row">
 <figure class="image" align="center">
-  <div class="column">
-    <img src="../images/figures/Rim-Fire-Vegetation-Severity-9-16-2013.jpeg" alt="Snow">
-  </div>
-  <div class="column">
-    <img src="../images/figures/Rim-Fire-Soil-Severity-9-17-2013.jpeg" alt="Forest">
-  </div>
-  <figcaption align="center>sdfspdomovf</figcaption>
+  <img src="../images/CA_landCover/ca.png" alt="CA landcover">
+  <figcaption align="center">California's land cover </figcaption>
 </figure>
-</div>
+

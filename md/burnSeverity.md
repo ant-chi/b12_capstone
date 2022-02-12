@@ -38,15 +38,17 @@ The first is that the completeness of wildfire mapping methods is insufficient. 
 The second issue relates to the consistency of severity maps. Maps produced by MTBS rely on analysts to subjectively determine dNBR thresholds to produce severity classifications. In addition, these thresholds are not validated with field data or ecologically quantified so the consistency of their maps is questionable. [7] 
 Another source of inconsistency is the use of different pre and post fire images since these agencies mostly operate independently and on different timelines. Ideally, the selected pre and post fire images are as close to a fire as possible because using images that are further apart can influence results. For example, selecting a post fire image from a later date allows vegetation regrowth from fire or seasonal changes in vegetation to occur. Or if a fire occurs in November but a pre-fire image from spring is used, this can increase a fire’s dNBR value since the absolute decrease in vegetation is greater. [8] For these reasons, agencies often come up with conflicting results. The Rim Fire burned 250,000 acres near Yosemite and was one of the most destructive wildfires in state history in 2013. The fire severity map produced by RAVG showed that 88% of the area was burned, while the soil burn severity map by BAER showed 56% of the land was unchanged or had a low severity burn. 
 
+<figure class="image" align="center">
 <div class="row">
   <div class="column">
-    <img src="../images/figures/Rim-Fire-Vegetation-Severity-9-16-2013.jpeg" alt="Snow">
+    <img src="../images/figures/Rim-Fire-Vegetation-Severity-9-16-2013.jpeg" alt="RAVG">
   </div>
   <div class="column">
-    <img src="../images/figures/Rim-Fire-Soil-Severity-9-17-2013.jpeg" alt="Forest">
+    <img src="../images/figures/Rim-Fire-Soil-Severity-9-17-2013.jpeg" alt="BAER">
   </div>
 </div>
-
+	<figcaption align="center">RAVG and BAER severity maps for 2013 Rim Fire </figcaption>
+</figure>
 
 
 The third issue, which only affects MTBS, is the speed at which severity maps are produced. They release maps on a two year lag and as of today still have not released any for fires from the 2020 and 2021 fire seasons. This delay is likely due to the large number of fires they are responsible for and the amount of human influence required.
