@@ -28,7 +28,7 @@
     <img src="../images/figures/Rim-Fire-Soil-Severity-9-17-2013.jpeg" alt="Forest">
   </div>
 </div>
-<figcaption align="center>sdfspdomovf</figcaption>
+	<figcaption align="center">17 selected fires with bounding boxes </figcaption>
 </figure>
 
 
