@@ -197,7 +197,7 @@ We also tested our models on the Steele Fire (2017) which occurs in Modoc County
 <figure class="image" align="center">
 <div class="row">
   <div class="column">
-    <img src="images/fireImages/steelePostFire.png" alt="steele postfire">
+    <img src="images/fireImages/steelePostFire.png" alt="steele postfire" style="width:496;height:253px;">
   </div>
 </div>
 <div class="row">
