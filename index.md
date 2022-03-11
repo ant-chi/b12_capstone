@@ -67,7 +67,7 @@ The main groups responsible for mapping fires in the US are MTBS, RAVG, and BAER
 Several issues currently hinder the effectiveness of burn severity maps produced by these groups. Due to various agency requirements, lack of resources, and the immense number of wildfires every year, federal agencies are only able to map a fraction of wildfires. This leads to lacking fire documentation and coverage, which could limit the work of groups that depend on fire severity maps. In addition there is a lack of “completeness” in the data used to produce fire severity maps. Only two spectral bands, NIR and SWIR, are used from Landsat to calculate dNBR and contextual data, like land cover or weather aren’t used. This additional data could contain relevant information that can be uncovered with machine learning.
 
 The second issue relates to the consistency of severity maps. Maps produced by MTBS rely on analysts to subjectively determine dNBR thresholds to produce severity classifications. These thresholds are not validated with field data or ecologically quantified so the consistency of their maps is questionable. [7] 
-Another source of inconsistency is the use of different pre and post fire images since these agencies operate separately and on different timelines. Ideally, the selected pre-post fire images are as close to a fire as possible because using images that are further apart can influence results. For example, selecting a post fire image from a later date allows vegetation regrowth from fire or seasonal changes in vegetation to occur. Or if a fire occurs in November but a pre-fire image from spring is used, this can increase a fire’s dNBR value since the absolute decrease in vegetation is greater. [8] For these reasons, agencies often come up with conflicting results. Figures 3a-b demonstrate this issue with the 2013 Rim Fire near Yosemite National Park.
+Another source of inconsistency is the use of different pre and post fire images since these agencies operate separately and on different timelines. Ideally, the selected pre-post fire images are as close to a fire as possible because using images that are further apart can influence results. For example, selecting a post fire image from a later date allows vegetation regrowth from fire or seasonal changes in vegetation to occur. Or if a fire occurs in November but a pre-fire image from spring is used, this can increase a fire’s dNBR value since the absolute decrease in vegetation is greater. [8] For these reasons, agencies often come up with conflicting results. Figure 5 demonstrates this issue with the 2013 Rim Fire near Yosemite National Park.
 
 <figure class="image" align="center">
 <div class="row">
@@ -81,7 +81,7 @@ Another source of inconsistency is the use of different pre and post fire images
 	<figcaption align="center">Figure 5: Conflicting RAVG and BAER severity maps for Rim Fire (2013) </figcaption>
 </figure>
 
-The third issue, which only affects MTBS, is the speed at which severity maps are produced. They release maps on a two year lag and as of today still have not released any for fires from the 2020 and 2021 fire seasons. This delay is likely due to the large number of fires they are responsible for and the amount of human influence required. 
+The third issue, which only affects MTBS, is the speed at which severity maps are produced. They release maps on a two year lag and as of today still haven't released any for fires from the 2020 and 2021 fire seasons. This delay is likely due to the large number of fires they are responsible for and the amount of human influence required. 
 
 
 ## 1.4&nbsp;&nbsp;&nbsp;&nbsp;Related Research
@@ -95,7 +95,7 @@ Our study will be focused on Northern California since it is a global hotspot fo
 
 <figure class="image" align="center">
   <img src="images/CA_landCover/ca.png" alt="firefighter image" style="width:400px; height:450px">
-  <figcaption align="center">Figure 4: California Land Cover (2016)</figcaption>
+  <figcaption align="center">Figure 6: California Land Cover (2016)</figcaption>
 </figure>
 
 
@@ -121,6 +121,7 @@ Data on California wildfire seasons from 1950-2020 is provided by [CALFIRE](http
 
 ## 2.1&nbsp;&nbsp;&nbsp;&nbsp;Fire and Image Selection
 In total, 17 fires were selected from a candidate set of 79 fires. The fires occurred across Northern California between 2013-2020 because this coincides with the launch of Landsat 8 (February 2013) and the California wildfire dataset doesn’t include any fires past the 2020 fire season. All selected fires are at least 10,000 acres in size because fires of this size are better documented and have more pixels to sample. Our selection criteria was to get a representatative sample of fires in Northern California based on size, location, time of year, and land cover type. This improves the robustness and generalizability of our models to fires in different conditions.
+
 <figure class="image" align="center">
 <div class="row">
   <div class="column">
@@ -130,7 +131,7 @@ In total, 17 fires were selected from a candidate set of 79 fires. The fires occ
     <img src="images/figures/firesMap.png" alt="firesMap" style="width:500px;">
   </div>
 </div>
-	<figcaption align="center">Figure 5: Fire Data and map of selected fire with bounding boxes</figcaption>
+	<figcaption align="center">Figure 7: Fire Data and map of selected fires with bounding boxes</figcaption>
 </figure>
 
 
@@ -191,8 +192,8 @@ This is demonstrated well with the Carr Fire (2018).
 
 
 
-## 4.3&nbsp;&nbsp;&nbsp;&nbsp;Season
-We found that seasonal changes in vegetation and the presence of snow were a major roadblock to producing burn severity maps for fires in winter months with either method. For example we tested our models on the Slink Fire (2020) which burned in the Sierra Nevadas late into the fire season. As a result, the candidate set of post-fire images are strongly affected by snow and seasonal vegetation loss.  The fire scar is fairly visible in Figure 7b, but is partly obscured by snow, which is blue in the false color image, in the central part of the fire and in the surrounding region. 
+## 4.2&nbsp;&nbsp;&nbsp;&nbsp;Season
+We found that seasonal changes in vegetation and the presence of snow were a major roadblock to producing burn severity maps for fires in winter months with either method. For example we tested our models on the Slink Fire (2020) which burned in the Sierra Nevadas late into the fire season. As a result, the candidate set of post-fire images are strongly affected by snow and seasonal vegetation loss.  The fire scar is fairly visible in Figure 8b, but is partly obscured by snow, which is blue in the false color image, in the central part of the fire and in the surrounding region. 
 
 <figure class="image" align="center">
 <div class="row">
@@ -211,13 +212,13 @@ We found that seasonal changes in vegetation and the presence of snow were a maj
     <img src="images/fireImages/slinkMLP.png" alt="slink MLP">
   </div>
 </div>
-	<figcaption align="center">Figure 6a, b (Top Row): Pre, Post Slink Fire False Color Images <br>Figure 6c, d (Bottom Row): dNBR Thresholded Map, MLP Predicted Map</figcaption>
+	<figcaption align="center">Figure 8a, b (Top Row): Pre, Post Slink Fire False Color Images <br>Figure 8c, d (Bottom Row): dNBR Thresholded Map, MLP Predicted Map</figcaption>
 </figure>
 
 
-An issue with the thresholded map in Figure 7c is that there are many pixels classified as vegetation growth, mostly near regions with snow. In the top right corner of the images is agricultural land that is unburned by the Slink FIre. However due to crop harvesting or seasonal changes in winter, this area has less vegetation postfire. As a result, the linear dNBR threshold picks up on this and misclassifies these pixels as low severity burns in Figure 7c. These issues contribute a lot of noise to the burn severity map and can make it more difficult to interpret a fire’s burn severity. As demonstrated with our MLP classifier in Figure 7d, our models are not as sensitive to these factors and are able to produce a clear burn severity map that better shows the fires outline.
+An issue with the thresholded map in Figure 8c is that there are many pixels classified as vegetation growth, mostly near regions with snow. In the top right corner of the images is agricultural land that is unburned by the Slink FIre. However due to crop harvesting or seasonal changes in winter, this area has less vegetation postfire. As a result, the linear dNBR threshold picks up on this and misclassifies these pixels as low severity burns in Figure 8c. These issues contribute a lot of noise to the burn severity map and can make it more difficult to interpret a fire’s burn severity. As demonstrated with our MLP classifier in Figure 8d, our models are not as sensitive to these factors and are able to produce a clear burn severity map that better shows the fires outline.
 
-For fires with heavier snow coverage and seasonal vegetation loss, our models really broke down and produced inaccurate results. This was very apparent when we tested our Logistic Classifier on the Abney Fire (2017). In Figure 8b, the fire scar isn’t really visible and large amounts of snow obscure much of the image.
+For fires with heavier snow coverage and seasonal vegetation loss, our models really broke down and produced inaccurate results. This was very apparent when we tested our Logistic Classifier on the Abney Fire (2017). In Figure 9b, the fire scar isn’t really visible and large amounts of snow obscure much of the image.
 
 
 <figure class="image" align="center">
@@ -237,7 +238,7 @@ For fires with heavier snow coverage and seasonal vegetation loss, our models re
     <img src="images/fireImages/abneyLogistic.png" alt="abney logistic">
   </div>
 </div>
-	<figcaption align="center">Figure 7a, b (Top Row): Pre, Post Abney Fire False Color Images <br>Figure 7c, d (Bottom Row): dNBR Thresholded Map, Logistic Regression Predicted Map</figcaption>
+	<figcaption align="center">Figure 9a, b (Top Row): Pre, Post Abney Fire False Color Images <br>Figure 9c, d (Bottom Row): dNBR Thresholded Map, Logistic Regression Predicted Map</figcaption>
 </figure>
 
 
@@ -248,7 +249,7 @@ Our models struggle with fires that have more snow and produce inaccurate result
 
 
 
-## 4.4&nbsp;&nbsp;&nbsp;&nbsp;Land Cover
+## 4.3&nbsp;&nbsp;&nbsp;&nbsp;Land Cover
 Our model performed well on fires of mixed land covers that occur most frequently in Napa and Sonoma counties. These fires can be difficult to produce burn severity maps for because discrete severity thresholds may not accurately represent how fires behave in different land covers. We tested our models on the Atlas Fire (2017) as it is adjacent to Napa, CA and has a very mixed land cover composition with lots of agricultural and urban areas. 
 
 <figure class="image" align="center">
@@ -268,10 +269,10 @@ Our model performed well on fires of mixed land covers that occur most frequentl
     <img src="images/fireImages/atlasMLP.png" alt="Atlas MLP">
   </div>
 </div>
-	<figcaption align="center">Figure 8a, b (Top Row): Pre, Post Atlas Fire False Color Images <br>Figure 8c, d (Bottom Row): dNBR Thresholded Map, MLP Predicted Map</figcaption>
+	<figcaption align="center">Figure 10a, b (Top Row): Pre, Post Atlas Fire False Color Images <br>Figure 10c, d (Bottom Row): dNBR Thresholded Map, MLP Predicted Map</figcaption>
 </figure>
 
-Using our MLP classifier we are able to produce a map that accurately identifies burned and unburned regions and shows the shape of the Atlas Fire. A key difference is that the map produced by the MLP classifier shows the Atlas Fire as having a significantly more severe burn compared to the linear threshold method. This is likely a more accurate assessment of the Atlas Fire as dNBR thresholding is known to underestimate burn severities in shrub and grassland. [3] A strength of using our models in environments with mixed land covers is that they are robust to changes in agricultural regions from crop sowing and harvesting. The linear threshold picks up on these changes and classifies many pixels on unburned farmland as having a low severity burn or vegetation growth, which adds a lot more noise.
+Using our MLP classifier we are able to produce a map that accurately identifies burned and unburned regions and shows the shape of the Atlas Fire. A key difference is that the map produced by the MLP classifier, Figure 8c, shows the Atlas Fire as having a significantly more severe burn compared to the linear threshold method. This is likely a more accurate assessment of the Atlas Fire as dNBR thresholding is known to underestimate burn severities in shrub and grassland. [3] A strength of using our models in environments with mixed land covers is that they are robust to changes in agricultural regions from crop sowing and harvesting. The linear threshold picks up on these changes and classifies many pixels on unburned farmland as having a low severity burn or vegetation growth, which adds a lot more noise.
 
 We also tested our models on the Steele Fire (2017) which occurs in Modoc County, a part of California that is mostly covered by shrubland. As mentioned with the Atlas Fire, dNBR thresholding struggles to produce accurate burn severity classifications for fires in shrubland and other less vegetated regions. A quick solution around this issue, that is employed by MTBS, is to have analysts subjectively determine severity thresholds. However this approach introduces a lot of human influence, produces inconsistent results, and is time-consuming.
 
@@ -292,11 +293,11 @@ We also tested our models on the Steele Fire (2017) which occurs in Modoc County
     <img src="images/fireImages/steeleRF.png" alt="steele RF">
   </div>
 </div>
-	<figcaption align="center">Figure 9a, b (Top Row): Pre, Post Steele Fire False Color Images <br>Figure 9c, d (Bottom Row): dNBR Thresholded Map, Random Forest Predicted Map</figcaption>
+	<figcaption align="center">Figure 11a, b (Top Row): Pre, Post Steele Fire False Color Images <br>Figure 11c, d (Bottom Row): dNBR Thresholded Map, Random Forest Predicted Map</figcaption>
 </figure>
 
 
-The burn severity map in Figure 10c demonstrates this issue as a large majority of pixels are classified as unburned. In contrast, the map produced with a Random Forest classifier in Figure 10d shows that it is much more capable of identifying burned areas and depicting the fire’s outline. Our training data did not include many fires that occurred in shrubland dominant ecosystems, so with further model training this result could likely be improved.
+The burn severity map in Figure 11c demonstrates this issue as a large majority of pixels are classified as unburned. In contrast, the map produced with a Random Forest classifier in Figure 9d shows that it is much more capable of identifying burned areas and depicting the fire’s outline. Our training data did not include many fires that occurred in shrubland dominant ecosystems, so with further model training this result could likely be improved.
 
 ## 5&nbsp;&nbsp;&nbsp;&nbsp;Further Work <a name="furtherWork"></a>
 
