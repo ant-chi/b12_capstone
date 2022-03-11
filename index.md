@@ -122,10 +122,10 @@ In total, 17 fires were selected from a candidate set of 79 fires. The fires occ
 <figure class="image" align="center">
 <div class="row">
   <div class="column">
-    <img src="images/figures/fireTable.png" alt="fireTable" style="height:425px; width:500px;">
+    <img src="images/figures/fireTable.png" alt="fireTable" style="width:500px;">
   </div>
   <div class="column">
-    <img src="images/figures/firesMap.png" alt="firesMap" style="height:500px; width:500px;">
+    <img src="images/figures/firesMap.png" alt="firesMap" style="width:500px;">
   </div>
 </div>
 	<figcaption align="center">Figure 5: Fire Data and map of selected fire with bounding boxes</figcaption>
