@@ -195,10 +195,10 @@ We found that seasonal changes in vegetation and the presence of snow were a maj
 <figure class="image" align="center">
 <div class="row">
   <div class="column">
-    <img src="images/fireImages/slinkPreFire.png" alt="slink prefire" style="width:480px; height:369px;">
+    <img src="images/fireImages/slinkPreFire.png" alt="slink prefire" style="height:369px;">
   </div>
   <div class="column">
-    <img src="images/fireImages/slinkPostFire.png" alt="slink postfire" style="width:480px; height:369px;">
+    <img src="images/fireImages/slinkPostFire.png" alt="slink postfire" style="height:369px;">
   </div>
 </div>
 <div class="row">
