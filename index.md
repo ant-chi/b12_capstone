@@ -195,10 +195,10 @@ We found that seasonal changes in vegetation and the presence of snow were a maj
 <figure class="image" align="center">
 <div class="row">
   <div class="column">
-    <img src="images/fireImages/slinkPreFire.png" alt="slink prefire" style="height:369px;">
+    <img src="images/fireImages/slinkPreFire.png" alt="slink prefire">
   </div>
   <div class="column">
-    <img src="images/fireImages/slinkPostFire.png" alt="slink postfire" style="height:369px;">
+    <img src="images/fireImages/slinkPostFire.png" alt="slink postfire">
   </div>
 </div>
 <div class="row">
@@ -221,10 +221,10 @@ For fires with heavier snow coverage and seasonal vegetation loss, our models re
 <figure class="image" align="center">
 <div class="row">
   <div class="column">
-    <img src="images/fireImages/abneyPreFire.png" alt="abney prefire" style="width:496px; height:302px;">
+    <img src="images/fireImages/abneyPreFire.png" alt="abney prefire">
   </div>
   <div class="column">
-    <img src="images/fireImages/abneyPostFire.png" alt="abney postfire" style="width:496px; height:302px;">
+    <img src="images/fireImages/abneyPostFire.png" alt="abney postfire">
   </div>
 </div>
 <div class="row">
@@ -252,10 +252,10 @@ Our model performed well on fires of mixed land covers that occur most frequentl
 <figure class="image" align="center">
 <div class="row">
   <div class="column">
-    <img src="images/fireImages/atlasPreFire.png" alt="atlas prefire" style="width:317px; height:369px;">
+    <img src="images/fireImages/atlasPreFire.png" alt="atlas prefire">
   </div>
   <div class="column">
-    <img src="images/fireImages/atlasPostFire.png" alt="atlas postfire" style="width:317px; height:369px;">
+    <img src="images/fireImages/atlasPostFire.png" alt="atlas postfire">
   </div>
 </div>
 <div class="row">
@@ -276,10 +276,10 @@ We also tested our models on the Steele Fire (2017) which occurs in Modoc County
 <figure class="image" align="center">
 <div class="row">
   <div class="column">
-    <img src="images/fireImages/steelePreFire.png" alt="steele prefire" style="width:496px; height:253px;">
+    <img src="images/fireImages/steelePreFire.png" alt="steele prefire">
   </div>
   <div class="column">
-    <img src="images/fireImages/steelePostFire.png" alt="steele postfire" style="width:496px; height:253px;">
+    <img src="images/fireImages/steelePostFire.png" alt="steele postfire">
   </div>
 </div>
 <div class="row">
