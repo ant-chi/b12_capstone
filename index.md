@@ -14,7 +14,7 @@
 In recent years, wildfires have been growing into a much larger environmental and public safety threat. Fire seasons are larger, more destructive, and burning longer than ever before that the US Forest Service has coined the term “fire year”. The exact causes for this behavior are not known, but scientists point to climate change, increased human activity from expansion into rural areas, and over-zealous fire prevention policies that have created environments ripe for wildfires with large buildups of combustible fire fuels. [1] This phenomenon is happening across the world, but is especially apparent in Northern California, which has historically been a global hotspot for wildfires. The 2018 fire season, the worst in California’s history, was responsible for an estimated $102.6 billion in damages in California. [13] In addition to extensive economic damage, wildfires also pose a significant health hazard by exposing millions of people along the West Coast to harmful aerosol pollutants, such as ash and dust. Our preliminary analysis also confirms that wildfires are more frequent and destructive. From 1990-2020 there has been a 267% increase in the number of fires annually and in the past 20 years there has been a 520% increase in the number of fire seasons that exceed 500,000 burned acres compared to the 50 years prior.
 <figure class="image" align="center">
   <img src="images/figures/img1.jpeg" alt="firefighter image">
-  <figcaption align="center">Firefigher battles the 2020 Creek Fire </figcaption>
+  <figcaption align="center">Figure 1: Firefigher battles the 2020 Creek Fire </figcaption>
 </figure>
 
 
@@ -26,7 +26,7 @@ Burn severity maps are widely used by federal agencies and forest managers to ma
 
 <figure class="image" align="center">
   <img src="images/figures/buckMTBS.png" alt="firefighter image">
-  <figcaption align="center">Burn severity map of 2017 Buck Fire by MTBS</figcaption>
+  <figcaption align="center">Figure 2: Burn severity map of 2017 Buck Fire by MTBS</figcaption>
 </figure>
 
 Traditional methods of producing these maps are expensive and time-consuming since they require teams of surveyors and ecologists to gather in-situ data. For many fires, this is infeasible due to harsh terrain and weather. These methods are still used for certain fires, but have been largely phased out with the introduction of remotely sensed data from Earth observing satellites. Fires can be mapped at a much faster and larger scale at a fraction of the cost relative to field surveys, while still maintaining high accuracy. Remote sensing data is widely used in many other applications, such as agriculture, climate change, and natural disasters, since they cover long time spans and are continuously updated with high resolution, multi-spectral data.
@@ -42,7 +42,7 @@ The near-infrared band (NIR) is sensitive to chlorophyll present in live vegetat
 
 <figure class="image" align="center">
   <img src="https://un-spider.org/sites/default/files/Spectral_responses.jpg" alt="nbr">
-  <figcaption align="center">Reflectance of NIR, SWIR for burned and unburned areas </figcaption>
+  <figcaption align="center">Figure 3: Reflectance of NIR, SWIR for burned and unburned areas </figcaption>
 </figure>
 
 To produce a burn severity map, optimal pre and post fire images are selected based on their proximity to a fire and the presence of environmental factors that reduce image quality, like clouds, smoke, and snow.
@@ -52,7 +52,7 @@ A weakness of using dNBR is that it tends to underestimate burn severity in regi
 
 <figure class="image" align="center">
   <img style="width:65%" src="https://www.researchgate.net/profile/Andrea-Thode/publication/222816542/figure/fig3/AS:305187903295494@1449773874713/Typical-NBR-and-dNBR-values-in-two-plots-with-moderate-A-and-high-B-and-C-percent.png" alt="nbr example">
-  <figcaption align="center">Figure 2: Scenario where dNBR thresholding underestimates burn severity [3]</figcaption>
+  <figcaption align="center">Figure 4: Scenario where dNBR thresholding underestimates burn severity [3]</figcaption>
 </figure>
 
 This leads to an underestimate of burn severity that skews the results of fire severity maps. A relativized version of dNBR, rdNBR, has been shown to perform better in regions that are less vegetated and have mixed vegetation types, but it isn’t as commonly used.[3]
@@ -76,7 +76,7 @@ Another source of inconsistency is the use of different pre and post fire images
     <img src="images/figures/Rim-Fire-Soil-Severity-9-17-2013.jpeg" alt="BAER">
   </div>
 </div>
-	<figcaption align="center">RAVG and BAER severity maps for 2013 Rim Fire </figcaption>
+	<figcaption align="center">Figure 5: Conflicting RAVG and BAER severity maps for Rim Fire (2013) </figcaption>
 </figure>
 
 The third issue, which only affects MTBS, is the speed at which severity maps are produced. They release maps on a two year lag and as of today still have not released any for fires from the 2020 and 2021 fire seasons. This delay is likely due to the large number of fires they are responsible for and the amount of human influence required. 
@@ -92,7 +92,7 @@ Given these benefits, we propose the use of machine learning methods with remote
 Our study will be focused on Northern California since it is a global hotspot for wildfires that has affected a majority of students at UCSD. In addition, its infamous wildfires are well documented by CALFIRE, have been researched significantly in the past, and there are many remote sensing datasets that cover this region.
 
 <figure class="image" align="center">
-  <img src="images/CA_landCover/ca.png" alt="firefighter image">
+  <img src="images/CA_landCover/ca.png" alt="firefighter image" style="width:400px; height:450px">
   <figcaption align="center">Figure 4: California Land Cover (2016)</figcaption>
 </figure>
 
@@ -122,20 +122,18 @@ In total, 17 fires were selected from a candidate set of 79 fires. The fires occ
 <figure class="image" align="center">
 <div class="row">
   <div class="column">
-    <img src="images/figures/firesMap.png" alt="firesMap">
+    <img src="images/figures/fireTable.png" alt="fireTable" style="height:425px; width:500px;">
   </div>
   <div class="column">
-    <img src="images/figures/fireTable.png" alt="fireTable">
+    <img src="images/figures/firesMap.png" alt="firesMap" style="height:500px; width:500px;">
   </div>
 </div>
-	<figcaption align="center">Location and data of 17 selected fires </figcaption>
+	<figcaption align="center">Figure 5: Fire Data and map of selected fire with bounding boxes</figcaption>
 </figure>
 
 
 To get optimal pre and post fire images from Landsat 8, we considered all images that occurred 60 days before and after a fire. Images were selected based on the presence of environmental factors that reduce image quality, including clouds, smoke, and snow,
 and their proximity to a fire’s start or end. A majority of pre-fire images are within 14 days of a fire’s ignition, but some post-fire images occur much later due to poor image quality.
-
-#### [[+] Selection Details](./md/fireImageDetails.md)
 
 
 ## 2.3&nbsp;&nbsp;&nbsp;&nbsp;Data Extraction
@@ -197,10 +195,10 @@ We found that seasonal changes in vegetation and the presence of snow were a maj
 <figure class="image" align="center">
 <div class="row">
   <div class="column">
-    <img src="images/fireImages/slinkPreFire.png" alt="slink prefire">
+    <img src="images/fireImages/slinkPreFire.png" alt="slink prefire" style="width:480px; height:369px;">
   </div>
   <div class="column">
-    <img src="images/fireImages/slinkPostFire.png" alt="slink postfire">
+    <img src="images/fireImages/slinkPostFire.png" alt="slink postfire" style="width:480px; height:369px;">
   </div>
 </div>
 <div class="row">
@@ -211,7 +209,7 @@ We found that seasonal changes in vegetation and the presence of snow were a maj
     <img src="images/fireImages/slinkMLP.png" alt="slink MLP">
   </div>
 </div>
-	<figcaption align="center">Slink </figcaption>
+	<figcaption align="center">Figure 6a, b (Top Row): Pre, Post Slink Fire False Color Images <br>Figure 6c, d (Bottom Row): dNBR Thresholded Map, MLP Predicted Map</figcaption>
 </figure>
 
 
@@ -223,10 +221,10 @@ For fires with heavier snow coverage and seasonal vegetation loss, our models re
 <figure class="image" align="center">
 <div class="row">
   <div class="column">
-    <img src="images/fireImages/abneyPreFire.png" alt="abney prefire">
+    <img src="images/fireImages/abneyPreFire.png" alt="abney prefire" style="width:496px; height:302px;">
   </div>
   <div class="column">
-    <img src="images/fireImages/abneyPostFire.png" alt="abney postfire">
+    <img src="images/fireImages/abneyPostFire.png" alt="abney postfire" style="width:496px; height:302px;">
   </div>
 </div>
 <div class="row">
@@ -237,7 +235,7 @@ For fires with heavier snow coverage and seasonal vegetation loss, our models re
     <img src="images/fireImages/abneyLogistic.png" alt="abney logistic">
   </div>
 </div>
-	<figcaption align="center">Abney</figcaption>
+	<figcaption align="center">Figure 7a, b (Top Row): Pre, Post Abney Fire False Color Images <br>Figure 7c, d (Bottom Row): dNBR Thresholded Map, Logistic Regression Predicted Map</figcaption>
 </figure>
 
 
@@ -254,10 +252,10 @@ Our model performed well on fires of mixed land covers that occur most frequentl
 <figure class="image" align="center">
 <div class="row">
   <div class="column">
-    <img src="images/fireImages/atlasPreFire.png" alt="atlas prefire">
+    <img src="images/fireImages/atlasPreFire.png" alt="atlas prefire" style="width:317px; height:369px;">
   </div>
   <div class="column">
-    <img src="images/fireImages/atlasPostFire.png" alt="atlas postfire">
+    <img src="images/fireImages/atlasPostFire.png" alt="atlas postfire" style="width:317px; height:369px;">
   </div>
 </div>
 <div class="row">
@@ -268,7 +266,7 @@ Our model performed well on fires of mixed land covers that occur most frequentl
     <img src="images/fireImages/atlasMLP.png" alt="Atlas MLP">
   </div>
 </div>
-	<figcaption align="center">Atlas</figcaption>
+	<figcaption align="center">Figure 8a, b (Top Row): Pre, Post Atlas Fire False Color Images <br>Figure 8c, d (Bottom Row): dNBR Thresholded Map, MLP Predicted Map</figcaption>
 </figure>
 
 Using our MLP classifier we are able to produce a map that accurately identifies burned and unburned regions and shows the shape of the Atlas Fire. A key difference is that the map produced by the MLP classifier shows the Atlas Fire as having a significantly more severe burn compared to the linear threshold method. This is likely a more accurate assessment of the Atlas Fire as dNBR thresholding is known to underestimate burn severities in shrub and grassland. [3] A strength of using our models in environments with mixed land covers is that they are robust to changes in agricultural regions from crop sowing and harvesting. The linear threshold picks up on these changes and classifies many pixels on unburned farmland as having a low severity burn or vegetation growth, which adds a lot more noise.
@@ -278,10 +276,10 @@ We also tested our models on the Steele Fire (2017) which occurs in Modoc County
 <figure class="image" align="center">
 <div class="row">
   <div class="column">
-    <img src="images/fireImages/steelePreFire.png" alt="steele prefire">
+    <img src="images/fireImages/steelePreFire.png" alt="steele prefire" style="width:496px; height:253px;">
   </div>
   <div class="column">
-    <img src="images/fireImages/steelePostFire.png" alt="steele postfire">
+    <img src="images/fireImages/steelePostFire.png" alt="steele postfire" style="width:496px; height:253px;">
   </div>
 </div>
 <div class="row">
@@ -292,7 +290,7 @@ We also tested our models on the Steele Fire (2017) which occurs in Modoc County
     <img src="images/fireImages/steeleRF.png" alt="steele RF">
   </div>
 </div>
-	<figcaption align="center">Steele</figcaption>
+	<figcaption align="center">Figure 9a, b (Top Row): Pre, Post Steele Fire False Color Images <br>Figure 9c, d (Bottom Row): dNBR Thresholded Map, Random Forest Predicted Map</figcaption>
 </figure>
 
 
