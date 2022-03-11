@@ -34,9 +34,11 @@ Traditional methods of producing these maps are expensive and time-consuming sin
 
 ## 1.2&nbsp;&nbsp;&nbsp;&nbsp;Normalized Burn Ratio (NBR)
 
-The most widespread spectral index for identifying burned areas and fire severity levels is the Normalized Burn Ratio, NBR =(NIR - SWIR)(NIR + SWIR)=(Band 5 - Band 7)(Band 5 + Band 7) 
+The most commonly used spectral index for identifying burned areas and fire severity levels is the Normalized Burn Ratio.
 
-NBR = (NIR-SWIR)(NIR+SWIR) and with Landsat this is NBR = (Band 5 - Band 7)(Band 5 + Band 7).
+<figure class="image" align="center">
+  <img src="images/figures/nbrFormula.jpeg" alt="nbr formula">
+</figure>
 
 The near-infrared band (NIR) is sensitive to chlorophyll present in live vegetation, while the short-wave infrared band (SWIR) is primarily sensitive to water content in soil and vegetation. It has also been shown to be capable of discerning dead wood from burned soil, ash, and charred wood. As a result, NBR is sensitive to live, photosynthetically active vegetation, moisture content, and certain post-fire surface conditions. [3]
 
@@ -55,7 +57,7 @@ A weakness of using dNBR is that it tends to underestimate burn severity in regi
   <figcaption align="center">Figure 4: Scenario where dNBR thresholding underestimates burn severity [3]</figcaption>
 </figure>
 
-This leads to an underestimate of burn severity that skews the results of fire severity maps. A relativized version of dNBR, rdNBR, has been shown to perform better in regions that are less vegetated and have mixed vegetation types, but it isn’t as commonly used.[3]
+This leads to an underestimate of burn severity that often skews the results of fire severity maps.[7] A relativized version of dNBR, rdNBR, has been shown to perform better in regions that are less vegetated and have mixed vegetation types, but it isn’t as commonly used. [3]
 
 
 ## 1.3&nbsp;&nbsp;&nbsp;&nbsp;Federal Fire Mapping Groups
@@ -298,7 +300,7 @@ The burn severity map in Figure 10c demonstrates this issue as a large majority 
 
 ## 5&nbsp;&nbsp;&nbsp;&nbsp;Further Work <a name="furtherWork"></a>
 
-A common issue our models experienced was misidentifying burned pixels as unburned and this was especially noticeable for fires in shrub and grassland ecosystems. This likely occurs because our models are trained on burn severity values generated using dNBR thresholding. Having models trained on burn severity values generated using rdNBR thresholding instead for fires in these regions could be a workaround solution. Another solution would be incorporating more training data from a wider set of wildfires in shrub and grassland environments. This could improve the overall generalizability of our models in these environments
+A common issue our models experienced was misidentifying burned pixels as unburned and this was especially noticeable for fires in shrub and grassland ecosystems. This likely occurs because our models are trained on burn severity values generated using dNBR thresholding. Having models trained on burn severity values generated using rdNBR thresholding instead for fires in these regions could be a workaround solution. Another solution would be incorporating more training data from a wider set of wildfires in shrub and grassland environments. This could improve the overall generalizability of our models in these environments.
 
 We decided to use surface reflectance data from Landsat 8 over alternative options, such as Sentinel-2, because it’s also used by federal fire mapping agencies, has the same spatial resolution (30m) as our other data, and has been operating for longer, especially if previous Landsat satellites are considered. However there are several benefits that Sentinel-2 provides that make it an attractive option to explore. 
 
@@ -306,7 +308,7 @@ The first is that since Sentinel-2 is composed of two satellites that orbit in t
 
 
 ## 6&nbsp;&nbsp;&nbsp;&nbsp;Conclusion <a name="conclusion"></a>
-In this paper, we outline several issues with current fire mapping methods used by federal agencies that lead to inefficient, inconsistent, and incomplete results. Using data collected from Northern Californian wildfires, we demonstrate how supervised machine learning classifiers can be a viable alternative to current mapping methods. Our models work best for fires in non-winter months that occur in forested or mixed land cover environments and are able to accurately identify unburned areas and map burn severities. Our work serves as a strong starting point for further research on mapping and analyzing wildfires with machine learning.
+In this paper, we outline several issues with current fire mapping methods used by federal agencies that lead to inefficient, inconsistent, and incomplete results. Using data collected from Northern Californian wildfires, we demonstrate how supervised machine learning classifiers can be a viable alternative to current mapping methods. Our models work best for fires in non-winter months that occur in forested or mixed land cover environments and are able to accurately identify unburned areas and map burn severities. By using machine learning models to produce burn severity maps, we can produce maps without any human influence in a fraction of the time. Our work serves as a strong starting point for further research on mapping and analyzing wildfires with machine learning.
 
 ## 7&nbsp;&nbsp;&nbsp;&nbsp;References <a name="references"></a>
 1. **[Observed Impacts of Anthropogenic Climate Change on Wildfire in California](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019EF001210) (2019)**
@@ -317,7 +319,7 @@ In this paper, we outline several issues with current fire mapping methods used 
 6. **[Google Earth Engine: Planetary-scale geospatial analysis for everyone](https://www.sciencedirect.com/science/article/pii/S0034425717302900) (2017)**
 7. **[Limitations and utilisation of Monitoring Trends in Burn Severity products for assessing wildfire severity in the USA](http://www.pyrogeographer.com/uploads/1/6/4/8/16481944/kolden_etal_mtbs.pdf) (2015)**
 8. **[Digital change detection techniques using remotely-sensed data](https://www.tandfonline.com/doi/pdf/10.1080/01431168908903939) (1989)**
-9. **[Classifying and Mapping Wildfire Severity] (https://www.ingentaconnect.com/content/asprs/pers/2005/00000071/00000011/art00006#) (2005)**
+9. **[Classifying and Mapping Wildfire Severity](https://www.ingentaconnect.com/content/asprs/pers/2005/00000071/00000011/art00006#) (2005)**
 10. **[Meta-discoveries from a synthesis of satellite-based land-cover mapping research](https://www.tandfonline.com/doi/full/10.1080/01431161.2014.930206) (2014)**
 11. **[Random forest classifier for remote sensing classification](https://www.tandfonline.com/doi/full/10.1080/01431160412331269698) (2005)**
 12. **[Random forest in remote sensing: A review of applications and future directions](https://www.sciencedirect.com/science/article/pii/S0924271616000265?casa_token=B3S6Acn8XpcAAAAA:PkRUhramLKWbK-GkOsEDYJwO-Ueq0oqiMnT7H_w8s1-IhnpwxdbLWhUpZz4_ghDBRFN4XC6BzCI) (2016)**
